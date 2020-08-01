@@ -17,4 +17,4 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile.dev --tag lburja/docker-react:$(date +%s)
       - name: Run tests
-      run: docker run lburja/docker-react:$(date +%s) npm run test
+      run: docker run lburja/docker-react:$(date +%s) npm run test -- --coverage
